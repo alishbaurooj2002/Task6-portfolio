@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frontend Portfolio</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- Dev Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<style>
+/* ================= GLOBAL ================= */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section {
+  margin: 80px 0;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+.center-box {
+  width: 100%;
+  max-width: 900px;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ================= CARDS ================= */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* ================= EXPERIENCE ================= */
+.experience-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 30px;
+}
+.experience-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+.experience-item::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 22px;
+  width: 2px;
+  height: calc(100% - 22px);
+  background: #0d6efd;
+}
+
+/* ================= CONTACT ================= */
+.contact-card input,
+.contact-card textarea {
+  border-radius: 12px;
+}
+
+/* ================= DARK MODE ================= */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #f1f1f1 !important;
+}
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+.dark-mode a {
+  color: #f1f1f1 !important;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .intro img {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  .section {
+    margin: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .center-box {
+    max-width: 100%;
+  }
+
+  .btn-group,
+  .d-flex {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .experience-item {
+    padding-left: 25px;
+  }
+}
+</style>
+</head>
+
+<body class="bg-light text-dark">
+
+<!-- ================= NAVBAR ================= -->
+<div class="navbar d-flex align-items-center justify-content-around mb-4 px-3">
+  <div class="logo ">
+    <img src="Images/Elegant blue _Alishba_ logo design.png" alt="logo" width="100px" class="rounded-circle border border-2 p-1">
+  </div>
+
+  <div class="nav-menu d-flex gap-4 border border-2 rounded-pill px-4 py-2">
+    <a href="#" class="text-decoration-none text-black">Home</a>
+    <a href="#about" class="text-decoration-none text-black">About</a>
+    <a href="#experience" class="text-decoration-none text-black">Experience</a>
+    <a href="#contact" class="text-decoration-none text-black">Contact</a>
+  </div>
+
+  <button id="theme-toggle" class="btn btn-secondary">
+    <i id="theme-icon" class="fas fa-moon"></i>
+  </button>
+</div>
+
+<!-- ================= HOME ================= -->
+<section class="center-wrapper">
+  <div class="center-box text-center intro">
+    <img src="Images/image2.png"
+         class="rounded-circle border border-3 border-primary mb-4 img-fluid"
+         style="width:200px;height:200px;object-fit:cover;">
+
+    <h4>Hi! I am <strong>ALISHBA UROOJ 😃</strong></h4>
+    <h6 class="text-muted">Frontend Web Developer</h6>
+
+    <p class="mt-3 px-2">
+      I design and develop modern, responsive, and user-friendly web interfaces.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <button class="btn btn-primary rounded-pill px-4">Hire Me</button>
+      <button class="btn btn-outline-primary rounded-pill px-4">Download CV</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="center-wrapper">
+    <div class="center-box text-center">
+
+      <h2 class="section-title">About Me</h2>
+
+      <p class="mb-5 px-2">
+        Passionate frontend developer focused on clean UI, accessibility,
+        and performance-driven interfaces.
+      </p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-sm-6">
+          <div class="card p-4 h-100">
+            <i class="fas fa-code fs-2 mb-2"></i>
+            <h5>Skills</h5>
+            <p>HTML, CSS, JavaScript, React, Flutter</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card p-4 h-100">
+            <i class="fas fa-laptop-code fs-2 mb-2"></i>
+            <h5>Projects</h5>
+            <p>Web Apps, Dashboards, UI Systems</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card p-4 h-100">
+            <i class="fas fa-graduation-cap fs-2 mb-2"></i>
+            <h5>Education</h5>
+            <p>Bachelor of science in computer science</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="section-title mt-5"><h3>Technologies I Work With:</h3>
+      <div class="d-flex justify-content-center gap-4 mt-5 flex-wrap">
+        <i class="devicon-react-original colored fs-2"></i>
+        <i class="devicon-javascript-plain colored fs-2"></i>
+        <i class="devicon-firebase-plain colored fs-2"></i>
+        <i class="devicon-flutter-plain colored fs-2"></i>
+        <i class="devicon-vscode-plain colored fs-2"></i>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section">
+  <div class="center-wrapper">
+    <div class="center-box">
+
+      <h2 class="section-title">Experience</h2>
+
+      <div class="experience-item">
+        <h6>Flutter Development Intern</h6>
+        <span class="badge bg-primary mb-2">Aug 2024 – Oct 2024</span>
+        <p>Worked on Flutter UI, layouts, and mobile responsiveness.</p>
+      </div>
+
+      <div class="experience-item">
+        <h6>Web Developer</h6>
+        <span class="badge bg-success mb-2">Dec 2025 – Present</span>
+        <p>Building modern websites using HTML, CSS, JavaScript, and React.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section">
+  <div class="center-wrapper">
+    <div class="center-box">
+
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="card contact-card p-4 shadow">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Your Name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Your Email">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+          </div>
+
+          <button class="btn btn-primary w-100 rounded-pill">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= DARK MODE ================= -->
+<script>
+const btn = document.getElementById("theme-toggle");
+const icon = document.getElementById("theme-icon");
+
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  icon.classList.toggle("fa-moon");
+  icon.classList.toggle("fa-sun");
+});
+</script>
+
+</body>
+</html>
